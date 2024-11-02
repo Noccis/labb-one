@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styling/note.css'
 
 const Note = ({title, description}) => {
   return (
-    <div>
+    <div id='note-item'>
         <h2>{title}</h2>
         <p>{description}</p>
     </div>

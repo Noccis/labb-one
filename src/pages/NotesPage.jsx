@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import NoteInput from '../components/NoteInput'
 import NotesList from '../components/NotesList'
 import data from '../local-json/projects.json'
+import '../styling/notesPage.css'
 
 const NotesPage = () => {
     const [listOfNotes, setListOfNotes] = useState([]);
