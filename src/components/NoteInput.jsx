@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const NoteInput = () => {
+const NoteInput = ({listOfNotes, setListOfNotes}) => {
   const [note, setNote] = useState({title: '', description: ''});
 
   const handleChange = ((e)=>setNote({...note, [e.target.name]: e.target.value}));
@@ -8,6 +8,7 @@ const NoteInput = () => {
   const handleSubmit = (e)=>{
     e.preventDefault();
     console.log(note)
+    setListOfNotes([...listOfNotes, note])
   }
 
   return (

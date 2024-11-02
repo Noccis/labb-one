@@ -13,7 +13,7 @@ const NotesPage = () => {
 
   return (
     <div id='note-content'>
-        <NoteInput />
+        <NoteInput listOfNotes={listOfNotes} setListOfNotes={setListOfNotes}/>
         <NotesList list={listOfNotes}/>
     </div>
   )
