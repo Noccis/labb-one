@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Note from './Note';
+import '../styling/noteslist.css'
 
 const NotesList = ({list}) => {
 
@@ -17,7 +18,7 @@ const NotesList = ({list}) => {
     }
 
   return (
-    <div>
+    <div id='notes-list'>
         {listOfNotes}
     </div>
   )

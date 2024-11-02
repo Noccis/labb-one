@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import '../App.css'
+import '../styling/noteInput.css'
 
 const NoteInput = ({listOfNotes, setListOfNotes}) => {
   const [note, setNote] = useState({title: '', description: ''});
@@ -12,17 +14,19 @@ const NoteInput = ({listOfNotes, setListOfNotes}) => {
   }
 
   return (
-    <div>
-      <form  onSubmit={handleSubmit}>
+    <div id='input-form'>
+      <form  onSubmit={handleSubmit} className='flex-column'>
         <input
         type='text'
         name='title'
+        placeholder='Titel'
         value={note.title}
         onChange={handleChange} />
 
         <input
         type='text'
         name='description'
+        placeholder='Notering'
         value={note.description}
         onChange={handleChange} />
 
