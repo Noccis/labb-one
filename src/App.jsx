@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NotesList from './components/NotesList'
+import NotesPage from './pages/NotesPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,7 @@ function App() {
         <h3>Första labben</h3>
       </header>
       <main className='flex-column'>
-        <NotesList />
+        <NotesPage />
       </main>
     </>
   )

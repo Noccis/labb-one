@@ -1,15 +1,16 @@
-import React from 'react'
-import data from '../local-json/projects.json'
+import React, { useEffect } from 'react'
 import Note from './Note';
 
-const NotesList = () => {
+const NotesList = ({list}) => {
 
+  useEffect(()=> {
+    console.log("Noteslist check!")
+  },[])
     let listOfNotes = null;
 
-    if(data != null){
-        listOfNotes = data.map((note, index)=> (
-                <Note 
-                id={index} 
+    if(list != null){
+        listOfNotes = list.map((note, index)=> (
+                <Note key={index}
                 title={note.title} 
                 description={note.description}/>        
         ))
