@@ -1,21 +1,25 @@
 [
     {
         "title": "Utflykt" ,
-        "description": "På fredag ska dom till ormparken, tillbaka kl 16 senast"
+        "description": "På fredag ska dom till ormparken, tillbaka kl 16 senast",
+        "date": "2024/03/21"
     },
 
     {
         "title": "Sömn" ,
-        "description": "Leon sov dålig natten till fredag p.g.a. hosta"
+        "description": "Leon sov dålig natten till fredag p.g.a. hosta",
+        "date": "2024/04/10"
     },
 
     {
         "title": "Höst" ,
-        "description": "Vi behöver köpa skalbyxor"
+        "description": "Vi behöver köpa skalbyxor",
+        "date": "2024/08/12"
     },
 
     {
         "title": "Lego båt" ,
-        "description": "Håll utkik efter den blåa legobåten, vi hittar den inte i stugan"
+        "description": "Håll utkik efter den blåa legobåten, vi hittar den inte i stugan",
+        "date": "2024/10/3"
     }
 ]

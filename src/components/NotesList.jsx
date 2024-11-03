@@ -7,7 +7,12 @@ const NotesList = ({ list }) => {
 
   if (list != null) {
     listOfNotes = list.map((note, index) => (
-      <Note key={index} title={note.title} description={note.description} />
+      <Note
+        key={index}
+        title={note.title}
+        description={note.description}
+        date={note.date}
+      />
     ));
   }
 
