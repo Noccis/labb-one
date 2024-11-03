@@ -3,17 +3,30 @@ import "../App.css";
 import "../styling/noteInput.css";
 
 const NoteInput = ({ listOfNotes, setListOfNotes }) => {
-  const [note, setNote] = useState({ title: "", description: "" });
+  const [note, setNote] = useState({ title: "", description: "", date: "" });
   const topInputRef = useRef(null);
 
   const handleChange = (e) =>
     setNote({ ...note, [e.target.name]: e.target.value });
 
+  function getTodaysDate() {
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const year = today.getFullYear();
+    const date = today.getDate();
+    return `${year}/${month}/${date}`;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setListOfNotes([...listOfNotes, note]);
-    setNote({ title: "", description: "" });
-    
+    const addedDate = getTodaysDate();
+
+    // Skapar ett nytt objekt för att när jag körde setNote så kom inte datumet med eftersom den är asynk
+    const updatedNote = { ...note, date: addedDate };
+    setListOfNotes([...listOfNotes, updatedNote]);
+    // Rensa input fields
+    setNote({ title: "", description: "", date: "" });
+
     // Ser till att översta input rutan markeras igen efter att man submittat för att enkelt kunna lägga till fler noteringar
     if (topInputRef.current) {
       topInputRef.current.focus();
