@@ -1,13 +1,13 @@
-import React from 'react'
-import '../styling/note.css'
+import React from "react";
+import "../styling/note.css";
 
-const Note = ({title, description}) => {
+const Note = ({ title, description }) => {
   return (
-    <div id='note-item'>
-        <h2>{title}</h2>
-        <p>{description}</p>
+    <div id="note-item">
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Note
+export default Note;
