@@ -31,7 +31,8 @@ const NoteInput = ({listOfNotes, setListOfNotes}) => {
         onChange={handleChange} />
 
         <input 
-        type='submit'/>        
+        type='submit'
+        value={'Lägg till'}/>        
       </form>
     </div>
   )
