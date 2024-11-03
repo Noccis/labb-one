@@ -7,7 +7,7 @@ function App() {
     <>
       <header className='flex-column'>
         <h1>Leave me a note</h1>
-        <h3>Första labben</h3>
+        <p id='subtitle'>Första labben</p>
       </header>
       <main className='flex-column'>
         <NotesPage />
