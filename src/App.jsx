@@ -1,17 +1,16 @@
-import { useState } from 'react'
 import './App.css'
+import NotesPage from './pages/NotesPage'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <header className='flex-column'>
-        <h1>Första labben</h1>
+        <h1>Leave me a note</h1>
+        <p id='subtitle'>Första labben</p>
       </header>
       <main className='flex-column'>
-        <p>Här ska första labben vara</p>
-        <p>Blablabla</p>
+        <NotesPage />
       </main>
     </>
   )

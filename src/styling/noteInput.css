@@ -1,0 +1,17 @@
+input {
+    border-radius: 5px;
+    margin: 2px;
+    padding: 7px;
+}
+
+input[type=submit] {
+    background-color: rgb(89, 135, 135);
+    color: white;
+    border: none;
+    padding: 7px 10px 7px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#input-form {
+    margin: 10px;
+}
