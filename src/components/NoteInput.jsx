@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import '../App.css'
 import '../styling/noteInput.css'
 
 const NoteInput = ({listOfNotes, setListOfNotes}) => {
   const [note, setNote] = useState({title: '', description: ''});
+  const topInputRef = useRef(null);
 
   const handleChange = ((e)=>setNote({...note, [e.target.name]: e.target.value}));
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    console.log(note)
-    setListOfNotes([...listOfNotes, note])
+    setListOfNotes([...listOfNotes, note]);
+    setNote({title: '', description: ''});
+    if (topInputRef.current) {
+      topInputRef.current.focus();
+    }
   }
 
   return (
@@ -21,7 +25,8 @@ const NoteInput = ({listOfNotes, setListOfNotes}) => {
         name='title'
         placeholder='Titel'
         value={note.title}
-        onChange={handleChange} />
+        onChange={handleChange}
+        ref={topInputRef} />
 
         <input
         type='text'
