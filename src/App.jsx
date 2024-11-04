@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import NotesPage from "./pages/NotesPage";
 
 function App() {
@@ -6,11 +7,11 @@ function App() {
     <>
       <header className="flex-column">
         <h1>Leave me a note</h1>
-        <p id="subtitle">Första labben</p>
       </header>
       <main className="flex-column">
         <NotesPage />
       </main>
+      <Footer />
     </>
   );
 }
